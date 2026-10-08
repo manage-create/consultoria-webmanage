@@ -149,8 +149,8 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 
 /* Breakpoint principal: 768px */
 @media (min-width:768px){
-  h1{font-size:42px}
-  h2{font-size:19px}
+  h1{font-size:50px}
+  h2{font-size:21px}
   h3{font-size:21px}
   .nav-links{display:flex}
   .hamburger{display:none} 
