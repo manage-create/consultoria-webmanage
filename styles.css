@@ -37,7 +37,7 @@ border-radius:4px;padding:14px 32px;cursor:pointer;text-decoration:none;transiti
 /* NAV */
 .nav{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.08)}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;height:72px}
-.logo{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:28px;color:var(--text);text-decoration:none}
+.logo{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:26px;color:var(--text);text-decoration:none}
 .nav-links{display:none;list-style:none;gap:32px}
 .nav-links a{text-decoration:none;color:var(--text-2);font-family:'Josefin Sans',sans-serif;
 font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}
@@ -150,9 +150,9 @@ letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
   h2{font-size:40px}
   h3{font-size:26px}
   .nav-links{display:flex}
-  .hamburger{display:none}): 
-   .nav-inner{height:90px}
-  .logo{font-size:50px}
+  .hamburger{display:none} 
+  .nav-inner{height:80px}
+  .logo{font-size:32px}
   .cards-3{grid-template-columns:repeat(3,1fr)}
   .services-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(4,1fr);gap:24px}
