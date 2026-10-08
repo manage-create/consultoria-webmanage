@@ -205,3 +205,25 @@ h2{font-size:28px;color:var(--accent)}         /* Títulos de sección, en color
   .footer-grid div:nth-child(2){text-align:center}
   .footer-grid div:nth-child(3){text-align:right}
 }
+
+/* ============================================================
+   PÁGINAS DE CONTENIDO (nosotros, legales, servicios)
+   ============================================================ */
+.page-hero h1{font-size:30px}
+@media (min-width:768px){.page-hero h1{font-size:44px}}
+.breadcrumb{font-size:14px;letter-spacing:.5px;margin-bottom:12px}
+.breadcrumb a{color:var(--text-2);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.legal-content{max-width:840px}
+.legal-content h2{font-size:24px;margin:48px 0 16px;text-align:left}
+.legal-content p{margin-bottom:16px}
+.legal-content ul{margin:0 0 16px 22px}
+.legal-content li{margin-bottom:8px}
+.legal-content a{color:var(--accent);font-weight:700;text-decoration:none}
+.legal-content a:hover{text-decoration:underline}
+.legal-content strong{color:var(--text)}
+.lead{font-size:20px;color:var(--text)}
+.duo{display:grid;gap:24px;margin:32px 0}
+.duo>div{border-left:3px solid var(--accent);padding:4px 0 4px 20px}
+@media (min-width:768px){.duo{grid-template-columns:1fr 1fr}}
+.closing-line{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:22px;color:var(--text);text-align:center;margin:48px 0 0}
