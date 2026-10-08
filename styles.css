@@ -195,3 +195,7 @@ h2{font-size:28px;color:var(--accent)}         /* Títulos de sección, en color
   h2{font-size:40px}             /* Títulos de sección */
 }
 
+/* --- Footer centrado solo en móvil --- */
+@media (max-width:767px){
+  .footer-grid{text-align:center}
+}
