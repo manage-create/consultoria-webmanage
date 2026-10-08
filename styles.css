@@ -189,8 +189,8 @@ h2{font-size:28px}                             /* Títulos de sección */
 
 /* --- Computadora --- */
 @media (min-width:768px){
-  .hero-kicker{font-size:22px}   /* Hero texto 1 */
-  .hero-tagline{font-size:22px}  /* Hero texto 3 */
+  .hero-kicker{font-size:19px}   /* Hero texto 1 */
+  .hero-tagline{font-size:19px}  /* Hero texto 3 */
   .hero h1{font-size:35px}       /* Hero texto 2: 30 + 5 que pediste */
   h2{font-size:40px}             /* Títulos de sección, como al inicio */
 }
