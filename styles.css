@@ -37,7 +37,7 @@ border-radius:4px;padding:14px 32px;cursor:pointer;text-decoration:none;transiti
 /* NAV */
 .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;height:50px}
-.logo{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:26px;color:var(--text);text-decoration:none}
+.logo{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:26px;color:var(--accent);text-decoration:none}
 .nav-links{display:none;list-style:none;gap:32px}
 .nav-links a{text-decoration:none;color:var(--text-2);font-family:'Josefin Sans',sans-serif;
 font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}
@@ -174,23 +174,24 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 #beneficios .card p{text-align:center}
 
 /* ============================================================
-   CONTROL DE TAMAÑOS — edita SOLO aquí los píxeles
+   CONTROL DE TAMAÑOS Y FUENTES — edita SOLO aquí
    (este bloque es el que manda sobre todo lo anterior)
    ============================================================ */
 
 /* --- Móvil --- */
-.hero-kicker{font-size:19px;line-height:1.5}   /* Hero texto 1: preguntas */
-.hero-tagline{font-size:19px;line-height:1.5}  /* Hero texto 3: "Ya emprendiste..." */
+.hero-kicker{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:19px;line-height:1.5}   /* Hero texto 1: preguntas */
+.hero-tagline{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:19px;line-height:1.5}  /* Hero texto 3: "Ya emprendiste..." */
 .hero h1{font-size:30px}                       /* Hero texto 2: título blanco */
-h2{font-size:28px}                             /* Títulos de sección */
+h2{font-size:28px;color:var(--accent)}         /* Títulos de sección, en color de marca */
 
 /* --- Pie de página --- */
-.footer-brand{font-size:13px;letter-spacing:1.5px;text-transform:uppercase} /* igual a CONTACTO */
+.footer-brand{font-size:13px;letter-spacing:1.5px}   /* TAMARA Consulting, sin mayúsculas forzadas */
 
 /* --- Computadora --- */
 @media (min-width:768px){
-  .hero-kicker{font-size:19px}   /* Hero texto 1 */
-  .hero-tagline{font-size:19px}  /* Hero texto 3 */
-  .hero h1{font-size:35px}       /* Hero texto 2: 30 + 5 que pediste */
-  h2{font-size:40px}             /* Títulos de sección, como al inicio */
+  .hero-kicker{font-size:22px}   /* Hero texto 1 */
+  .hero-tagline{font-size:22px}  /* Hero texto 3 */
+  .hero h1{font-size:35px}       /* Hero texto 2 */
+  h2{font-size:40px}             /* Títulos de sección */
 }
+
