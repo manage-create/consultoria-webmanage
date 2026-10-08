@@ -164,3 +164,11 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
   .contacto-grid{grid-template-columns:1.2fr .8fr}
   .footer-grid{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* TEXTOS NUEVOS — HERO y CIERRES */
+.hero-kicker{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:16px;letter-spacing:.5px;margin-bottom:20px;max-width:680px}
+.hero-tagline{margin-top:28px;font-size:18px;max-width:680px}
+.problem-closing{max-width:760px;margin:48px auto 0;text-align:center;font-size:19px;color:var(--text)}
+.cta-secondary{margin-top:24px;font-size:15px}
+.cta-secondary a{color:#fff;text-decoration:underline}
+.cta-secondary a:hover{opacity:.85}
