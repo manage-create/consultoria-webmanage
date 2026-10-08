@@ -149,9 +149,6 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 
 /* Breakpoint principal: 768px */
 @media (min-width:768px){
-  h1{font-size:55px}
-  h2{font-size:21px}
-  h3{font-size:21px}
   .nav-links{display:flex}
   .hamburger{display:none} 
   .nav-inner{height:72px}
@@ -172,7 +169,28 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 .cta-box .cta-secondary{margin:16px auto 20px;font-size:15px}
 .cta-box .btn-outline{background:transparent;border:1px solid #fff;color:#fff}
 .cta-box .btn-outline:hover{background:rgba(255,255,255,.15)}
-.hero h1{font-size:30px}
 
 #beneficios .card h3{text-align:center}
 #beneficios .card p{text-align:center}
+
+/* ============================================================
+   CONTROL DE TAMAÑOS — edita SOLO aquí los píxeles
+   (este bloque es el que manda sobre todo lo anterior)
+   ============================================================ */
+
+/* --- Móvil --- */
+.hero-kicker{font-size:19px;line-height:1.5}   /* Hero texto 1: preguntas */
+.hero-tagline{font-size:19px;line-height:1.5}  /* Hero texto 3: "Ya emprendiste..." */
+.hero h1{font-size:30px}                       /* Hero texto 2: título blanco */
+h2{font-size:28px}                             /* Títulos de sección */
+
+/* --- Pie de página --- */
+.footer-brand{font-size:13px;letter-spacing:1.5px;text-transform:uppercase} /* igual a CONTACTO */
+
+/* --- Computadora --- */
+@media (min-width:768px){
+  .hero-kicker{font-size:22px}   /* Hero texto 1 */
+  .hero-tagline{font-size:22px}  /* Hero texto 3 */
+  .hero h1{font-size:35px}       /* Hero texto 2: 30 + 5 que pediste */
+  h2{font-size:40px}             /* Títulos de sección, como al inicio */
+}
