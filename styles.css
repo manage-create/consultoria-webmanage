@@ -169,7 +169,10 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 .hero-kicker{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:16px;letter-spacing:.5px;margin-bottom:20px;max-width:680px}
 .hero-tagline{margin-top:28px;font-size:18px;max-width:680px}
 .problem-closing{max-width:760px;margin:48px auto 0;text-align:center;font-size:19px;color:var(--text)}
-.cta-secondary{margin-top:24px;font-size:15px}
-.cta-secondary a{color:#fff;text-decoration:underline}
-.cta-secondary a:hover{opacity:.85}
+.cta-box .cta-secondary{margin:16px auto 20px;font-size:15px}
+.cta-box .btn-outline{background:transparent;border:1px solid #fff;color:#fff}
+.cta-box .btn-outline:hover{background:rgba(255,255,255,.15)}
 .hero h1{font-size:30px}
+
+#beneficios .card h3{text-align:center}
+#beneficios .card p{text-align:center}
