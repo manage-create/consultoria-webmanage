@@ -199,3 +199,9 @@ h2{font-size:28px;color:var(--accent)}         /* Títulos de sección, en color
 @media (max-width:767px){
   .footer-grid{text-align:center}
 }
+
+/* --- Footer alineación en computadora: izq / centro / der --- */
+@media (min-width:768px){
+  .footer-grid div:nth-child(2){text-align:center}
+  .footer-grid div:nth-child(3){text-align:right}
+}
