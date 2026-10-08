@@ -36,7 +36,7 @@ border-radius:4px;padding:14px 32px;cursor:pointer;text-decoration:none;transiti
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;height:60px}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:50px}
 .logo{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:26px;color:var(--text);text-decoration:none}
 .nav-links{display:none;list-style:none;gap:32px}
 .nav-links a{text-decoration:none;color:var(--text-2);font-family:'Josefin Sans',sans-serif;
@@ -149,7 +149,7 @@ footer{background:var(--accent);color:#fff;padding:48px 0 16px;font-family:'Jose
 
 /* Breakpoint principal: 768px */
 @media (min-width:768px){
-  h1{font-size:50px}
+  h1{font-size:55px}
   h2{font-size:21px}
   h3{font-size:21px}
   .nav-links{display:flex}
