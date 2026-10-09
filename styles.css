@@ -227,3 +227,25 @@ h2{font-size:28px;color:var(--accent)}         /* Títulos de sección, en color
 .duo>div{border-left:3px solid var(--accent);padding:4px 0 4px 20px}
 @media (min-width:768px){.duo{grid-template-columns:1fr 1fr}}
 .closing-line{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:22px;color:var(--text);text-align:center;margin:48px 0 0}
+
+/* ============================================================
+   FAQ — índice, contrapreguntas, mini-pasos, cierres de bloque
+   ============================================================ */
+section[id]{scroll-margin-top:80px}
+.faq-index{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+.faq-index a{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:8px 16px;transition:background .3s,color .3s}
+.faq-index a:hover{background:var(--accent);color:#fff}
+.faq details p{padding:0 24px;margin-bottom:12px}
+.faq details ul{padding:0 24px 0 44px;margin-bottom:12px}
+.faq details li{margin-bottom:6px}
+.faq details>*:last-child:not(.pensar){padding-bottom:24px}
+.faq .pensar{margin:0 24px 24px;border-left:3px solid var(--accent);background:var(--bg-alt);padding:14px 18px;font-family:'Josefin Sans',sans-serif;font-weight:600;color:var(--text)}
+.faq .pensar::before{content:'Para pensar: ';color:var(--accent)}
+.mini-steps{display:grid;gap:16px;margin:32px 0 8px}
+.mini-steps>div{background:#fff;border:1px solid var(--border);border-bottom:3px solid var(--accent);padding:24px}
+.mini-steps .num{font-family:'League Spartan',sans-serif;font-weight:700;font-size:32px;color:var(--accent);line-height:1;display:block;margin-bottom:8px}
+.mini-steps h3{margin-bottom:8px}
+@media (min-width:768px){.mini-steps{grid-template-columns:repeat(3,1fr)}}
+.block-close{max-width:840px;margin:40px auto 0;text-align:center}
+.block-close p{font-size:19px;color:var(--text);max-width:680px;margin:0 auto 24px}
+
