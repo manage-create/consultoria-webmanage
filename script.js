@@ -40,3 +40,4 @@ document.querySelectorAll('.seg-toggle').forEach(btn => {
     btn.setAttribute('aria-expanded', open);
   });
 });
+
