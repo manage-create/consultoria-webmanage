@@ -30,14 +30,3 @@ document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Desplegar segmentos por categoría (diagnostico.html)
-document.querySelectorAll('.seg-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const seg = btn.nextElementSibling;
-    if (!seg) return;
-    const open = seg.classList.toggle('open');
-    btn.textContent = open ? 'Ocultar segmentos' : 'Conócelos';
-    btn.setAttribute('aria-expanded', open);
-  });
-});
-
