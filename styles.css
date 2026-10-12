@@ -322,9 +322,8 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 .gold-note{text-align:center;border-left:none;border-top:3px solid var(--gold);border-radius:4px}
 
 /* 7. Ofertas: solo la línea del recuadro, con color por nivel */
-.tier{border-bottom:3px solid var(--border)}
-.tier.gray-line{border-bottom:3px solid #8C9296}
-.tier.green-line{border-bottom:3px solid var(--accent)}
+.tier.gray-line{border:2px solid #8C9296}
+.tier.green-line{border:2px solid var(--accent)}
 .tier .price{text-align:center}
 
 /* Segmentos por categoría: ocultos por defecto, el interruptor los despliega */
@@ -337,3 +336,11 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 
 /* Etiquetas de los niveles de oferta, centradas */
 .tier .tag{display:block;width:max-content;margin-left:auto;margin-right:auto}
+
+/* Botones de categoría alineados abajo entre tarjetas */
+.cat-card{display:flex;flex-direction:column}
+.cat-card .seg-toggle{margin-top:auto}
+
+.tier h3{text-align:center}
+
+
