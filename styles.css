@@ -327,7 +327,11 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 .tier.green-line{border-bottom:3px solid var(--accent)}
 .tier .price{text-align:center}
 
-/* Ocultar/desplegar segmentos por categoría */
+/* Segmentos por categoría: ocultos por defecto, el interruptor los despliega */
 .cat-card .seg{display:none;margin-top:24px}
-.cat-card .seg.open{display:block}
+.seg-check{display:none}
+.seg-check:checked ~ .seg{display:block}
+.seg-toggle .lbl-close{display:none}
+.seg-check:checked ~ .seg-toggle .lbl-close{display:inline}
+.seg-check:checked ~ .seg-toggle .lbl-open{display:none}
 
