@@ -327,3 +327,7 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 .tier.green-line{border-bottom:3px solid var(--accent)}
 .tier .price{text-align:center}
 
+/* Ocultar/desplegar segmentos por categoría */
+.cat-card .seg{display:none;margin-top:24px}
+.cat-card .seg.open{display:block}
+
