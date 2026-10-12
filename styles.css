@@ -353,3 +353,6 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 .cards-3 .card{display:flex;flex-direction:column}
 .cards-3 .card .challenge{margin-top:auto}
 .cards-3 .card p:not(.challenge){margin-bottom:20px}
+
+/* Etiquetas de categoría: tamaño de su texto, no ancho completo */
+.cat-card .tag{align-self:flex-start}
