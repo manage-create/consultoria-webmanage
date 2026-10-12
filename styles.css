@@ -343,4 +343,13 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 
 .tier h3{text-align:center}
 
+/* ============================================================
+   DIAGNÓSTICO v4 — micro-espaciados finales
+   ============================================================ */
+/* Aire mínimo entre la intro y el botón Conócelos */
+.cat-card .cat-intro{margin-bottom:24px}
 
+/* Recuadros de desafío alineados abajo entre las 3 tarjetas */
+.cards-3 .card{display:flex;flex-direction:column}
+.cards-3 .card .challenge{margin-top:auto}
+.cards-3 .card p:not(.challenge){margin-bottom:20px}
