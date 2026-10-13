@@ -334,3 +334,15 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
   .tier .price{font-size:26px}
   .tier .ic-list li{font-size:15px;line-height:1.6}
 }
+
+/* ============================================================
+   DIAGNÓSTICO v6.1 — centrado fino de la oferta
+   ============================================================ */
+/* Texto centrado dentro de la pastilla del tag */
+.tier .tag{text-align:center}
+/* Botón CTA compacto y centrado, en vez de estirado a todo el ancho */
+.tier .btn{align-self:center}
+/* Título un punto más compacto en móvil (intenta una sola línea) */
+@media (max-width:767px){
+  .tier h3{font-size:20px}
+}
