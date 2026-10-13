@@ -356,3 +356,13 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 
 /* Etiquetas de categoría: tamaño de su texto, no ancho completo */
 .cat-card .tag{align-self:flex-start}
+
+/* ============================================================
+   DIAGNÓSTICO v5 — ofertas compactas en móvil
+   ============================================================ */
+@media (max-width:767px){
+  .tier{padding:24px 20px}
+  .tier h3{font-size:22px}
+  .tier .price{font-size:26px}
+  .tier .ic-list li{font-size:15px;line-height:1.6}
+}
