@@ -346,3 +346,18 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 @media (max-width:767px){
   .tier h3{font-size:20px}
 }
+
+/* ============================================================
+   DIAGNÓSTICO v6.2 — títulos de oferta en dos niveles
+   ============================================================ */
+.tier-title{display:block;text-align:center}
+.tier-title .lvl{display:block;font-family:'Josefin Sans',sans-serif;font-weight:600;
+font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-2);margin-bottom:6px}
+.tier-title .name{display:block;font-family:'League Spartan',sans-serif;font-weight:700;
+font-size:22px;line-height:1.2;color:var(--text)}
+/* El color del "Nivel" acompaña a su contorno */
+.tier.green-line .lvl{color:var(--accent)}
+.tier.featured .lvl{color:var(--gold-text)}
+@media (max-width:767px){
+  .tier-title .name{font-size:20px}
+}
