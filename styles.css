@@ -383,8 +383,9 @@ font-size:22px;line-height:1.2;color:var(--text)}
 /* ============================================================
    VENDER PRO — la tarjeta impar ocupa el ancho completo
    ============================================================ */
-.cards-2x2 .card:last-child:nth-child(odd){grid-column:1/-1;text-align:center}
-.cards-2x2 .card:last-child:nth-child(odd) p{max-width:640px;margin-left:auto;margin-right:auto}
+/* Tarjeta a lo ancho (la 7ª de B2B) — centrada */
+.card-wide{grid-column:1/-1;text-align:center}
+.card-wide p{max-width:640px;margin-left:auto;margin-right:auto}
 
 /* ============================================================
    ENLACES DE CONTENIDO — verde de marca + negrita
