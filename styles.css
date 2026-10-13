@@ -385,4 +385,10 @@ font-size:22px;line-height:1.2;color:var(--text)}
    ============================================================ */
 .cards-2x2 .card:last-child:nth-child(odd){grid-column:1/-1}
 
-
+/* ============================================================
+   ENLACES DE CONTENIDO — verde de marca + negrita
+   ============================================================ */
+.ic-list a,
+.faq details a{color:var(--accent);font-weight:700;text-decoration:none}
+.ic-list a:hover,
+.faq details a:hover{text-decoration:underline}
