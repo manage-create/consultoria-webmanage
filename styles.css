@@ -361,3 +361,28 @@ font-size:22px;line-height:1.2;color:var(--text)}
 @media (max-width:767px){
   .tier-title .name{font-size:20px}
 }
+
+/* ============================================================
+   LANDINGS VENDER PRO (B2C / B2B)
+   ============================================================ */
+.ic-warn{stroke:var(--coral);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-flag{stroke:var(--coral);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-star{stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.module{background:#fff;border:1px solid var(--border);padding:32px;margin-top:24px}
+.module .tag{margin-top:0}
+.module h3{margin:10px 0 4px}
+.mod-sub{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:17px;color:var(--text-2);margin-bottom:16px}
+.module h4{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin:20px 0 12px}
+.result{margin-top:20px;border-left:3px solid var(--accent);background:var(--bg-alt);padding:14px 18px;font-size:16px}
+.result strong{color:var(--text)}
+.offer-card{background:#fff;border:2px solid var(--gold);padding:40px 32px;max-width:560px;margin:48px auto 0;text-align:center}
+.offer-card h3{font-size:22px}
+.offer-card .price{font-family:'League Spartan',sans-serif;font-weight:700;font-size:38px;color:var(--text);margin:16px 0 0;line-height:1.2}
+.offer-card .price small{display:block;font-family:'Lato',sans-serif;font-weight:400;font-size:14px;color:var(--text-2);margin-top:4px}
+
+/* ============================================================
+   VENDER PRO — la tarjeta impar ocupa el ancho completo
+   ============================================================ */
+.cards-2x2 .card:last-child:nth-child(odd){grid-column:1/-1}
+
+
