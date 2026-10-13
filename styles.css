@@ -394,3 +394,9 @@ font-size:22px;line-height:1.2;color:var(--text)}
 .faq details a{color:var(--accent);font-weight:700;text-decoration:none}
 .ic-list a:hover,
 .faq details a:hover{text-decoration:underline}
+
+/* ============================================================
+   FASES EXPANDIBLES (prospección, validación)
+   ============================================================ */
+.module .seg{display:none;margin-top:20px}
+.module .seg-toggle{margin:20px auto 0}
