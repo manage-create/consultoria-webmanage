@@ -1,4 +1,19 @@
 // ============================================================
+// GOOGLE ANALYTICS 4 — activo en todas las páginas del sitio
+// ============================================================
+(function(){
+  const GA_ID = 'G-WEW0T9QKKF';  // ⚠️ REEMPLAZA por tu ID de medición
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+})();
+
+// ============================================================
 // TAMARA Consulting — script.js (compartido por todas las páginas)
 // ============================================================
 
