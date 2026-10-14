@@ -159,7 +159,18 @@
             </optgroup>
           </select>
         </div>
-     
+
+        <div class="form-group" id="grupo-categoria" style="display:none">
+          <label for="categoria">Categoría a auditar:</label>
+          <select id="categoria" name="categoria">
+            <option value="" disabled selected>Selecciona la categoría...</option>
+            <option>Categoría A — Fundamentos Estratégicos (Segmentos 1-7)</option>
+            <option>Categoría B — Arquitectura Operativa y Rentabilidad (Segmentos 8-13)</option>
+            <option>Categoría C — Ejecución Comercial (Segmentos 14-20)</option>
+            <option>Categoría D — Evolución, Innovación y Sostenibilidad (Segmentos 21-22)</option>
+          </select>
+        </div>
+         
         <div class="form-group">
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
@@ -294,20 +305,24 @@ const btnRegistrar = document.getElementById('btnRegistrar');
 const loadingReg = document.getElementById('loadingReg');
 const messageReg = document.getElementById('messageReg');
 
-// Selector de segmento: visible solo para Nivel 1
+// Selectores condicionales: segmento (Nivel 1) y categoría (Nivel 2)
 const grupoSegmento = document.getElementById('grupo-segmento');
-if (grupoSegmento) {
+const grupoCategoria = document.getElementById('grupo-categoria');
+if (grupoSegmento && grupoCategoria) {
   document.getElementById('servicio').addEventListener('change', function(){
     const esNivel1 = this.value.indexOf('Nivel 1') !== -1;
+    const esNivel2 = this.value.indexOf('Nivel 2') !== -1;
     grupoSegmento.style.display = esNivel1 ? 'block' : 'none';
+    grupoCategoria.style.display = esNivel2 ? 'block' : 'none';
   });
 }
-
+   
 regForm.addEventListener('submit', async function(e){
   e.preventDefault();
   const datos = {
     servicio:   document.getElementById('servicio').value,
     segmento:   (grupoSegmento && grupoSegmento.style.display === 'block') ? document.getElementById('segmento').value : '',
+    categoria:  (grupoCategoria && grupoCategoria.style.display === 'block') ? document.getElementById('categoria').value : '',
     nombre:     document.getElementById('nombre').value.trim(),
     email:      document.getElementById('email').value.trim(),
     telefono:   document.getElementById('telefono').value.trim(),
@@ -319,6 +334,13 @@ regForm.addEventListener('submit', async function(e){
     messageReg.style.display = 'block';
     return;
   }
+  if (grupoCategoria && grupoCategoria.style.display === 'block' && datos.categoria === '') {
+    messageReg.textContent = 'Selecciona la categoría que deseas auditar.';
+    messageReg.className = 'access-msg error';
+    messageReg.style.display = 'block';
+    return;
+  }
+   
   btnRegistrar.disabled = true;
   btnRegistrar.textContent = 'Procesando...';
   loadingReg.style.display = 'block';
@@ -335,7 +357,8 @@ regForm.addEventListener('submit', async function(e){
     if (typeof gtag === 'function') {
       gtag('event', 'registro_pago', {
         servicio: datos.servicio,
-        segmento: datos.segmento
+        segmento: datos.segmento,
+        categoria: datos.categoria
       });
     }
 
