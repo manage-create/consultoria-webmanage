@@ -414,9 +414,11 @@ text-transform:uppercase;border-radius:4px;padding:12px 24px;transition:backgrou
 .filter-toggle .lbl-close{display:none}
 .filter-check:checked ~ .filter-toggle .lbl-close{display:inline}
 .filter-check:checked ~ .filter-toggle .lbl-open{display:none}
-.filter-box{display:none;text-align:left;background:#fff;border:1px solid var(--border);
+.filter-box{display:none;text-align:left;background:#fff;color:var(--text-2);border:1px solid var(--border);
 border-top:3px solid var(--accent);border-radius:4px;padding:28px;margin-top:16px}
 .filter-box h3{margin-bottom:16px}
 .filter-verdict{margin-top:20px;border-top:1px solid var(--border);padding-top:16px;font-size:15px;line-height:1.8}
 .filter-verdict a{color:var(--accent);font-weight:700;text-decoration:none}
 .filter-verdict a:hover{text-decoration:underline}
+.filter-verdict{color:var(--text)}
+
