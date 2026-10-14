@@ -408,9 +408,22 @@ accForm.addEventListener('submit', async function(e){
     const response = await fetch(url);
     const resultado = await response.json();
     if (resultado.success) {
+      // MODO PROCEDIMIENTO: solo el formulario, ocultando todo lo demás
+      document.querySelector('nav.nav').style.display = 'none';
+      document.getElementById('mobileMenu').style.display = 'none';
+      document.querySelector('.page-hero').style.display = 'none';
+      document.getElementById('registro').style.display = 'none';
+      document.getElementById('codigo').style.display = 'none';
+      document.querySelector('footer').style.display = 'none';
+
+      // Apaga el spinner y limpia mensajes
+      loadingAcc.style.display = 'none';
+      messageAcc.style.display = 'none';
+
+      // Muestra el formulario del procedimiento
       tallySection.style.display = 'block';
       tallyContainer.dataset.tallySrc = resultado.formUrl || TALLY_FORM_URL;
-      tallyContainer.style.display = 'block';
+      tallyContainer.src = tallyContainer.dataset.tallySrc;
       if (!document.getElementById('tallyEmbedJs')) {
         const s = document.createElement('script');
         s.id = 'tallyEmbedJs';
