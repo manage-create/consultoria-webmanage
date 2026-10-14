@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago y Formalización | TAMARA Consulting</title>
+<meta name="description" content="Formaliza tu inversión con consignación, transferencia o llave Bre-B. Validación en máximo 24 horas y acceso trazable a tu procedimiento.">
+<meta property="og:title" content="Pago y Formalización | TAMARA Consulting">
+<meta property="og:description" content="Consolidación de inversiones, métodos de pago y formalización. Menos intuición. Más estructura.">
+<meta property="og:image" content="https://manage-create.github.io/consultoria-webmanage/og-image.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23626D71'/><text x='16' y='23' font-family='Arial' font-size='18' font-weight='bold' fill='white' text-anchor='middle'>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Josefin+Sans:wght@400;600;700&family=Lato:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ============================================================
+   PAGO — estilos propios de esta página
+   ============================================================ */
+.pay-notice{background:rgba(192,87,79,.07);border-left:4px solid var(--coral);border-radius:0 4px 4px 0;padding:20px 24px;margin:32px auto 0;max-width:840px;font-size:15px;line-height:1.7;color:var(--text)}
+.pay-notice strong{color:#8F3A34}
+.pay-notice a{color:var(--accent);font-weight:700;text-decoration:none}
+.pay-notice a:hover{text-decoration:underline}
+.group-label{font-family:'League Spartan',sans-serif;font-weight:700;font-size:22px;color:var(--text);text-align:center;margin:56px 0 8px}
+.pay-price{font-family:'League Spartan',sans-serif;font-weight:700;font-size:26px;color:var(--text);margin:16px 0 8px;text-align:center}
+.bank-list{list-style:none;padding:0;margin:12px 0 0}
+.bank-list li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:15px;flex-wrap:wrap}
+.bank-list li span:first-child{color:var(--text-2)}
+.bank-list li strong{color:var(--text)}
+.bre-key{font-family:'League Spartan',sans-serif;font-weight:700;font-size:22px;letter-spacing:1px;background:var(--bg-alt);border:1px dashed var(--border);border-radius:6px;padding:14px;text-align:center;margin-top:12px;color:var(--text)}
+.qr-placeholder{border:2px dashed var(--border);border-radius:8px;min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text-2);font-size:14px;padding:16px;margin-top:12px}
+</style>
+</head>
+<body>
+
+<!-- SECCIÓN: NAVEGACIÓN -->
+<nav class="nav" aria-label="Navegación principal">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TAMARA Consulting</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contacto.html">Contacto</a>
+</div>
+
+<!-- SECCIÓN: ENCABEZADO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Pago y Formalización</h1>
+    <p style="max-width:720px;margin:16px auto 0">Todo lo que necesitas para consolidar tu inversión en un solo lugar: la oferta completa, los medios de pago y el proceso de formalización. Sin letra pequeña.</p>
+    <nav class="faq-index" aria-label="Índice de la página">
+      <a href="#inversiones">Inversiones</a>
+      <a href="#metodos">Métodos de pago</a>
+      <a href="#formalizacion">Formalización</a>
+      <a href="#ya-pague">Ya pagué</a>
+    </nav>
+
+    <div class="pay-notice">
+      <strong>Aviso importante — servicios digitales de consumo inmediato:</strong>
+      al registrarte aceptas que el servicio contratado se ejecuta de manera inmediata y que, conforme al artículo 47 de la Ley 1480 de 2011, al generarse y descargarse tu informe queda sin efecto el derecho de retractación.
+      <strong>Excepción — Capacitación en Vender Profesionalmente:</strong> puedes retractarte hasta 24 horas antes de la jornada agendada.
+      Conoce los detalles en los <a href="terminos.html">Términos y Condiciones</a> y en nuestras <a href="faq.html#formalizacion">Preguntas Frecuentes</a>.
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: INVERSIONES -->
+<section id="inversiones">
+  <div class="container">
+    <h2 class="text-center fade-in">Elige tu intervención</h2>
+    <p class="section-sub fade-in">Cada servicio resuelve un problema específico. Si vienes de una landing, confirma aquí tu inversión; si aún estás comparando, entra a los detalles completos de cada una.</p>
+
+    <h3 class="group-label">Diagnóstico Profesional de la Estructura Comercial</h3>
+
+    <div class="tier-grid">
+      <div class="tier gray-line fade-in">
+        <div class="tier-title"><span class="lvl">Nivel 1</span><span class="name">Intervención Focalizada</span></div>
+        <span class="tag tag-line">1 segmento · Prueba de concepto</span>
+        <p class="price">$8'000.000 COP<small>Inversión única</small></p>
+        <p style="text-align:center">La radiografía de un segmento crítico: la puerta de entrada a la metodología.</p>
+        <a href="diagnostico.html" class="btn btn-outline">Ver detalles</a>
+      </div>
+      <div class="tier green-line fade-in">
+        <div class="tier-title"><span class="lvl">Nivel 2</span><span class="name">Auditoría Estructural</span></div>
+        <span class="tag tag-line">1 categoría completa</span>
+        <p class="price">$15'000.000 COP<small>Inversión única</small></p>
+        <p style="text-align:center">Un ecosistema completo evaluado, con su informe compilado y patrones ocultos.</p>
+        <a href="diagnostico.html" class="btn btn-outline">Ver detalles</a>
+      </div>
+      <div class="tier featured fade-in">
+        <div class="tier-title"><span class="lvl">Nivel 3</span><span class="name">Intervención Integral</span></div>
+        <span class="tag tag-gold">22 segmentos · Experiencia insignia</span>
+        <p class="price">$25'000.000 COP<small>Inversión única</small></p>
+        <p style="text-align:center">La radiografía completa + Sesión de Alineación Ejecutiva 1-a-1.</p>
+        <a href="diagnostico.html" class="btn">Ver detalles</a>
+      </div>
+    </div>
+    <p class="problem-closing" style="font-size:16px">Si escalas de nivel dentro de los primeros 15 días, <strong>lo invertido se acredita completamente</strong> hacia tu nueva modalidad.</p>
+
+    <h3 class="group-label">Servicios especializados</h3>
+
+    <div class="cards-2x2 fade-in">
+      <div class="card">
+        <h3>Capacitación en Vender Profesionalmente — B2C Retail</h3>
+        <p>Jornada intensiva de 6 horas para equipos de punto de venta: convertir visitas en ventas con método, proteger el margen y fidelizar.</p>
+        <p class="pay-price">$12'600.000 COP</p>
+        <a href="venta-pro-b2c.html" class="link-more" aria-label="Ver detalles de la Capacitación en Vender Profesionalmente B2C Retail">Ver detalles →</a>
+      </div>
+      <div class="card">
+        <h3>Capacitación en Vender Profesionalmente — B2B Transaccional</h3>
+        <p>Jornada intensiva de 6 horas para equipos B2B: calificar prospectos con criterio, responder objeciones y cerrar con margen y flujo protegidos.</p>
+        <p class="pay-price">$12'600.000 COP</p>
+        <a href="venta-pro-b2b.html" class="link-more" aria-label="Ver detalles de la Capacitación en Vender Profesionalmente B2B Transaccional">Ver detalles →</a>
+      </div>
+      <div class="card">
+        <h3>Gestión Profesional del Proceso de Prospección</h3>
+        <p>Procedimiento guiado de 5 fases que entrega tu "Documento — Procedimiento de la Estructura de Prospección". Todo automatizado.</p>
+        <p class="pay-price">$8'000.000 COP</p>
+        <a href="prospeccion.html" class="link-more" aria-label="Ver detalles de la Gestión Profesional del Proceso de Prospección">Ver detalles →</a>
+      </div>
+      <div class="card">
+        <h3>Validación de tu Idea de Negocio</h3>
+        <p>4 fases que generan tu ruta de acción y valores de viabilidad — sin revelar tu idea a nadie. Sal al mercado real y decide con datos.</p>
+        <p class="pay-price">$8'000.000 COP</p>
+        <a href="validacion.html" class="link-more" aria-label="Ver detalles de la Validación de tu Idea de Negocio">Ver detalles →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: MÉTODOS DE PAGO -->
+<section id="metodos" style="background:var(--bg-alt)">
+  <div class="container">
+    <h2 class="text-center fade-in">Métodos de pago</h2>
+    <p class="section-sub fade-in">Pago único y completo. No se concertan cuotas. El programa no tiene descuentos. <strong>Guarda tu comprobante:</strong> la referencia de tu consignación o transferencia es necesaria para el registro.</p>
+    <div class="cards-3">
+
+      <div class="card fade-in">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <h3>Consignación o transferencia</h3>
+        <!-- COMPLETAR: datos reales de la cuenta -->
+        <ul class="bank-list">
+          <li><span>Banco:</span><strong>[COMPLETAR]</strong></li>
+          <li><span>Tipo de cuenta:</span><strong>[Ahorros / Corriente]</strong></li>
+          <li><span>Número de cuenta:</span><strong>[COMPLETAR]</strong></li>
+          <li><span>A nombre de:</span><strong>[Razón social / Nombre]</strong></li>
+          <li><span>NIT / CC:</span><strong>[COMPLETAR]</strong></li>
+        </ul>
+      </div>
+
+      <div class="card fade-in">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <h3>Llave Bre-B</h3>
+        <p>Transferencia inmediata entre bancos, con tu llave única. Compártenos el pago y registra tu referencia.</p>
+        <!-- COMPLETAR: tu llave Bre-B -->
+        <div class="bre-key">[TU LLAVE BRE-B]</div>
+        <p style="font-size:13px;margin-top:10px;color:var(--text-2)">La llave puede ser numérica, de correo, de teléfono o alfanumérica, según cómo la configuraste.</p>
+      </div>
+
+      <div class="card fade-in">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h3v3H7zM14 7h3v3h-14z" transform="translate(0,0)"/><path d="M7 14h3v3H7zM14 14h3v3h-3z"/></svg>
+        <h3>Código QR</h3>
+        <p>Escanea con la app de tu banco y paga al instante.</p>
+        <!-- COMPLETAR: sube tu QR al repositorio como qr-pago.jpg y reemplaza este bloque por:
+             <img src="qr-pago.jpg" alt="Código QR de pago" style="width:100%;max-width:220px;margin:12px auto 0;display:block;border:1px solid var(--border);border-radius:8px"> -->
+        <div class="qr-placeholder">[Aquí va tu código QR]<br>Súbelo al repositorio y reemplaza este recuadro</div>
+      </div>
+    </div>
+
+    <div class="gold-note fade-in">Después de pagar, el paso siguiente es el registro: tus datos + la referencia del pago. Sin registro no hay validación — la trazabilidad protege tu compra y la nuestra.</div>
+  </div>
+</section>
+
+<!-- SECCIÓN: FORMALIZACIÓN -->
+<section id="formalizacion">
+  <div class="container">
+    <h2 class="text-center fade-in">Formalización</h2>
+    <div class="legal-content fade-in" style="margin:0 auto">
+      <p>Toda prestación se formaliza con la firma de dos documentos: el <strong>contrato de Prestación del Servicio</strong> del programa específico y el <strong>contrato de confidencialidad intelectual, industrial y de derechos de autor</strong>. Estos documentos te llegan junto con la validación de tu pago.</p>
+      <p>Condiciones por tipo de servicio:</p>
+      <ul>
+        <li><strong>Servicios automatizados</strong> (Diagnóstico, Prospección, Validación): tu informe se genera y descarga al instante al terminar el procedimiento. Conforme al artículo 47 de la Ley 1480 de 2011, al generarse y descargarse tu informe queda sin efecto el derecho de retractación — consentimiento que documentas al registrarte.</li>
+        <li><strong>Capacitación en Vender Profesionalmente:</strong> puedes retractarte hasta 24 horas antes de la jornada agendada. Una vez iniciada la jornada no hay devolución, y las condiciones de aplazamiento (25% mensual, máximo 1 mes) están estipuladas en el contrato.</li>
+      </ul>
+      <p>Lee las condiciones completas en los <a href="terminos.html">Términos y Condiciones</a>, el detalle de la formalización en <a href="faq.html#formalizacion">nuestras Preguntas Frecuentes</a> y el tratamiento de tus datos en el <a href="privacidad.html">Aviso de Privacidad</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: YA PAGUÉ -->
+<section id="ya-pague" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="cta-box fade-in">
+      <h2>¿Ya pagaste?</h2>
+      <p>Registra tu pago para validarlo y recibir tu acceso. Ten a la mano la referencia de tu consignación o transferencia.</p>
+      <a href="acceso.html#registro" class="btn">Registrar mi pago ahora</a>
+      <p style="margin-top:24px;font-size:15px">Validación en máximo 24 horas. Los servicios automatizados reciben su <strong>código de acceso</strong> por email; la Capacitación en Vender Profesionalmente recibe su <strong>enlace de Calendly</strong> para agendar la jornada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: FOOTER (maestro) -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">TAMARA Consulting</span>
+        <p>Menos intuición. Más estructura.</p>
+        <p>No arreglamos tu negocio. Te entregamos el mapa exacto para que tú lo hagas.</p>
+        <p><strong>De la intuición a la claridad estratégica</strong></p>
+      </div>
+      <div>
+        <p>
+          <a href="index.html">Inicio</a><br>
+          <a href="nosotros.html">Nosotros</a><br>
+          <a href="servicios.html">Servicios</a><br>
+          <a href="faq.html">FAQ</a><br>
+          <a href="contacto.html">Contacto</a>
+        </p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>info@tamaracpro.com<br>www.tamaracpro.com<br>Boyacá, Colombia</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>TAMARA Consulting</p>
+      <p><a href="privacidad.html">Aviso de Privacidad</a> - <a href="terminos.html">Términos y Condiciones</a></p>
+      <p>Todos los derechos reservados © <span id="year">2026</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
