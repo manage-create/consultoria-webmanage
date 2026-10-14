@@ -122,6 +122,45 @@
             <option>Validación de tu Idea de Negocio</option>
           </select>
         </div>
+
+         <div class="form-group" id="grupo-segmento" style="display:none">
+          <label for="segmento">Segmento a diagnosticar:</label>
+          <select id="segmento" name="segmento">
+            <option value="" disabled selected>Selecciona el segmento...</option>
+            <option>No lo sé aún — que el procedimiento lo detecte</option>
+            <optgroup label="Fundamentos Estratégicos">
+              <option>1. El Factor Fundacional</option>
+              <option>2. Blindaje Patrimonial</option>
+              <option>3. El Norte Estratégico</option>
+              <option>4. Coherencia de Marca</option>
+              <option>5. Inteligencia de Mercado</option>
+              <option>6. El Perfil de Alta Conversión</option>
+              <option>7. La Propuesta Irrefutable</option>
+            </optgroup>
+            <optgroup label="Arquitectura Operativa y Rentabilidad">
+              <option>8. Arquitectura del Margen</option>
+              <option>9. Defensa del Valor</option>
+              <option>10. Matriz de Rentabilidad</option>
+              <option>11. Ecosistema de Distribución</option>
+              <option>12. Liquidez Operativa</option>
+              <option>13. Tablero de Control Gerencial</option>
+            </optgroup>
+            <optgroup label="Ejecución Comercial">
+              <option>14. Flujo de Oportunidades</option>
+              <option>15. Ruta de Cierre Estandarizada</option>
+              <option>16. Alineación del Talento</option>
+              <option>17. Ciclo de Fidelización</option>
+              <option>18. Ritmo de Gestión</option>
+              <option>19. Gobierno de Decisiones</option>
+              <option>20. Evolución del Sistema</option>
+            </optgroup>
+            <optgroup label="Evolución, Innovación y Sostenibilidad">
+              <option>21. Horizonte de Crecimiento</option>
+              <option>22. Legado y Continuidad</option>
+            </optgroup>
+          </select>
+        </div>
+     
         <div class="form-group">
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
@@ -255,26 +294,29 @@ const btnRegistrar = document.getElementById('btnRegistrar');
 const loadingReg = document.getElementById('loadingReg');
 const messageReg = document.getElementById('messageReg');
 
+// Selector de segmento: visible solo para Nivel 1
+const grupoSegmento = document.getElementById('grupo-segmento');
+document.getElementById('servicio').addEventListener('change', function(){
+  const esNivel1 = this.value.indexOf('Nivel 1') !== -1;
+  grupoSegmento.style.display = esNivel1 ? 'block' : 'none';
+});   
+   
 regForm.addEventListener('submit', async function(e){
   e.preventDefault();
   const datos = {
     servicio:   document.getElementById('servicio').value,
+    segmento:   grupoSegmento.style.display === 'block' ? document.getElementById('segmento').value : '',
     nombre:     document.getElementById('nombre').value.trim(),
     email:      document.getElementById('email').value.trim(),
     telefono:   document.getElementById('telefono').value.trim(),
     referencia: document.getElementById('referencia').value.trim()
   };
-  btnRegistrar.disabled = true;
-  btnRegistrar.textContent = 'Procesando...';
-  loadingReg.style.display = 'block';
-  messageReg.style.display = 'none';
-  try {
-    await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {'Content-Type': 'text/plain;charset=utf-8'},
-      body: JSON.stringify(datos)
-    });
+  if (grupoSegmento.style.display === 'block' && datos.segmento === '') {
+    messageReg.textContent = 'Selecciona el segmento que deseas diagnosticar (o la opción de detección).';
+    messageReg.className = 'access-msg error';
+    messageReg.style.display = 'block';
+    return;
+  }
 
    // Evento de conversión para GA4
     if (typeof gtag === 'function') {
