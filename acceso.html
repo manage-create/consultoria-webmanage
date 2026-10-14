@@ -283,8 +283,9 @@
 <script>
 // ============================================================
 // LÓGICA DE REGISTRO Y ACCESO
-// ⚠️ REEMPLAZA LAS DOS URLS POR LAS DE TUS DESPLIEGUES REALES
 // ============================================================
+
+// ⚠️ PEGA AQUÍ TUS DOS URLS REALES (las que copiaste en el Paso 0)
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxJM6Pw9v7xhWTttrttk5O7zCACsVbF6labgf76n8IIlibEypscaibiubXWpoftVUa/exec";
 const TALLY_FORM_URL  = "https://tally.so/r/b5MA81";
 
@@ -296,36 +297,50 @@ const messageReg = document.getElementById('messageReg');
 
 // Selector de segmento: visible solo para Nivel 1
 const grupoSegmento = document.getElementById('grupo-segmento');
-document.getElementById('servicio').addEventListener('change', function(){
-  const esNivel1 = this.value.indexOf('Nivel 1') !== -1;
-  grupoSegmento.style.display = esNivel1 ? 'block' : 'none';
-});   
-   
+if (grupoSegmento) {
+  document.getElementById('servicio').addEventListener('change', function(){
+    const esNivel1 = this.value.indexOf('Nivel 1') !== -1;
+    grupoSegmento.style.display = esNivel1 ? 'block' : 'none';
+  });
+}
+
 regForm.addEventListener('submit', async function(e){
   e.preventDefault();
   const datos = {
     servicio:   document.getElementById('servicio').value,
-    segmento:   grupoSegmento.style.display === 'block' ? document.getElementById('segmento').value : '',
+    segmento:   (grupoSegmento && grupoSegmento.style.display === 'block') ? document.getElementById('segmento').value : '',
     nombre:     document.getElementById('nombre').value.trim(),
     email:      document.getElementById('email').value.trim(),
     telefono:   document.getElementById('telefono').value.trim(),
     referencia: document.getElementById('referencia').value.trim()
   };
-  if (grupoSegmento.style.display === 'block' && datos.segmento === '') {
+  if (grupoSegmento && grupoSegmento.style.display === 'block' && datos.segmento === '') {
     messageReg.textContent = 'Selecciona el segmento que deseas diagnosticar (o la opción de detección).';
     messageReg.className = 'access-msg error';
     messageReg.style.display = 'block';
     return;
   }
+  btnRegistrar.disabled = true;
+  btnRegistrar.textContent = 'Procesando...';
+  loadingReg.style.display = 'block';
+  messageReg.style.display = 'none';
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(datos)
+    });
 
-   // Evento de conversión para GA4
+    // Evento de conversión para GA4
     if (typeof gtag === 'function') {
       gtag('event', 'registro_pago', {
-        servicio: datos.servicio
+        servicio: datos.servicio,
+        segmento: datos.segmento
       });
     }
-     
-     messageReg.innerHTML =
+
+    messageReg.innerHTML =
       '<strong>Registro exitoso.</strong><br><br>' +
       'Tus datos fueron recibidos correctamente.<br><br>' +
       '<strong>Próximos pasos:</strong><br>' +
@@ -371,7 +386,6 @@ accForm.addEventListener('submit', async function(e){
     const response = await fetch(url);
     const resultado = await response.json();
     if (resultado.success) {
-      // Abre el formulario de Tally con auto-ajuste de altura (embed oficial)
       tallySection.style.display = 'block';
       tallyContainer.dataset.tallySrc = resultado.formUrl || TALLY_FORM_URL;
       tallyContainer.style.display = 'block';
