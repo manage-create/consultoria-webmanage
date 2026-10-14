@@ -275,7 +275,15 @@ regForm.addEventListener('submit', async function(e){
       headers: {'Content-Type': 'text/plain;charset=utf-8'},
       body: JSON.stringify(datos)
     });
-    messageReg.innerHTML =
+
+   // Evento de conversión para GA4
+    if (typeof gtag === 'function') {
+      gtag('event', 'registro_pago', {
+        servicio: datos.servicio
+      });
+    }
+     
+     messageReg.innerHTML =
       '<strong>Registro exitoso.</strong><br><br>' +
       'Tus datos fueron recibidos correctamente.<br><br>' +
       '<strong>Próximos pasos:</strong><br>' +
