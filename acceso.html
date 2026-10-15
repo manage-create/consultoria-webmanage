@@ -420,16 +420,9 @@ accForm.addEventListener('submit', async function(e){
       loadingAcc.style.display = 'none';
       messageAcc.style.display = 'none';
 
-      // Muestra el formulario del procedimiento
+      // Muestra el formulario del procedimiento (carga directa en el iframe)
       tallySection.style.display = 'block';
-      tallyContainer.dataset.tallySrc = resultado.formUrl || TALLY_FORM_URL;
-      tallyContainer.src = tallyContainer.dataset.tallySrc;
-      if (!document.getElementById('tallyEmbedJs')) {
-        const s = document.createElement('script');
-        s.id = 'tallyEmbedJs';
-        s.src = 'https://tally.so/widgets/embed.js';
-        document.body.appendChild(s);
-      }
+      tallyContainer.src = resultado.formUrl || TALLY_FORM_URL;
       window.scrollTo({top: 0, behavior: 'smooth'});
     } else {
       messageAcc.textContent = resultado.message || 'Código no válido.';
