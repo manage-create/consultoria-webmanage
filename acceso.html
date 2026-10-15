@@ -423,6 +423,7 @@ accForm.addEventListener('submit', async function(e){
       // Muestra el formulario del procedimiento (carga directa en el iframe)
       tallySection.style.display = 'block';
       tallyContainer.src = resultado.formUrl || TALLY_FORM_URL;
+      tallyContainer.style.display = 'block';
       window.scrollTo({top: 0, behavior: 'smooth'});
     } else {
       messageAcc.textContent = resultado.message || 'Código no válido.';
