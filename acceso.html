@@ -43,7 +43,7 @@
 .access-contact{margin-top:24px;padding-top:16px;border-top:1px solid var(--border);color:var(--text-2);font-size:13px;text-align:center}
 .access-contact a{color:var(--accent);font-weight:700;text-decoration:none}
 .access-contact a:hover{text-decoration:underline}
-#tallyContainer{display:none;width:100%;max-width:960px;margin:0 auto;height:80vh;min-height:600px;border:none;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+#tallyContainer{display:none;width:100%;max-width:960px;margin:0 auto;height:90vh;min-height:700px;border:none;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
 @media (max-width:600px){
   .access-card{padding:24px 18px}
   #tallyContainer{height:75vh;min-height:500px}
@@ -297,7 +297,7 @@
 
 // ⚠️ PEGA AQUÍ TUS DOS URLS REALES (las que copiaste en el Paso 0)
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxJM6Pw9v7xhWTttrttk5O7zCACsVbF6labgf76n8IIlibEypscaibiubXWpoftVUa/exec";
-const TALLY_FORM_URL  = "https://tally.so";
+const TALLY_FORM_URL  = "https://script.google.com/macros/s/AKfycbzIuJGjk9NqivHxAkXlJLIh2x-go6eJovjcCiu2GW2-0oT36sd31lE15VCIfHOkbKNB2Q/exec";
 
 // ---------- BLOQUE 1: REGISTRO ----------
 const regForm = document.getElementById('registroForm');
@@ -422,7 +422,8 @@ accForm.addEventListener('submit', async function(e){
 
       // Muestra el formulario del procedimiento (carga directa en el iframe)
       tallySection.style.display = 'block';
-      tallyContainer.src = resultado.formUrl || TALLY_FORM_URL;
+      // 🔥 NUEVO: Pasamos el código como parámetro en la URL
+      tallyContainer.src = TALLY_FORM_URL + '?codigo=' + encodeURIComponent(codigo);
       tallyContainer.style.display = 'block';
       window.scrollTo({top: 0, behavior: 'smooth'});
     } else {
